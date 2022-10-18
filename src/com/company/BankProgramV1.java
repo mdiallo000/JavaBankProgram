@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Set;
 
 public class BankProgramV1 {
     private HashMap<Integer,Integer> accounts = new HashMap<>();
@@ -51,6 +52,21 @@ public class BankProgramV1 {
         }else{
             System.out.println("Your loan was denied");
 
+        }
+    }
+    private void showAll(){
+        Set<Integer> accts = accounts.keySet();
+        System.out.println("The bank has " + accts.size() + " accounts.");
+        for(int i : accts){
+            System.out.println("\tBank account " + i + ": balance=" + accounts.get(i));
+        }
+    }
+    private void addInterest(){
+        Set<Integer> accts = accounts.keySet();
+        for(int i : accts){
+            int balance = accounts.get(i);
+            int newbanlance =  (int) (balance * (1+ rate));
+            accounts.put(i,newbanlance);
         }
     }
     private void processCommand(int cmd) {
