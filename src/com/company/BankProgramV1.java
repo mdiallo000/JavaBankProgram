@@ -20,6 +20,15 @@ public class BankProgramV1 {
         }
         scanner.close();
     }
+    private void quit(){
+        done =  true;
+        System.out.println("GoodBye!");
+    }
+    private void newAccount(){
+        current = nextacct++;
+        accounts.put(current, 0);
+        System.out.println("Your new account number is " + current);
+    }
 
     private void processCommand(int cmd) {
         if (cmd == 0) quit();
@@ -30,7 +39,7 @@ public class BankProgramV1 {
         else if (cmd == 5) showAll();
         else if (cmd == 6) addInterest();
         else {
-            system.out.println("illegal command");
+            System.out.println("illegal command");
         }
 
     }
