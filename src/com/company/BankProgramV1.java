@@ -34,6 +34,24 @@ public class BankProgramV1 {
         current = scanner.nextInt();
         int balance =  accounts.get(current);
         System.out.println("The balance of account" + current + " is "+ balance);
+
+    }
+    private void deposit(){
+        System.out.println("Enter deposit amount: ");
+        int amt = scanner.nextInt();
+        int balance =  accounts.get(current);
+        accounts.put(current, balance+amt);
+    }
+    private void authorizeloan(){
+        System.out.println("Enter loan amount: ");
+        int amt = scanner.nextInt();
+        int balance =  accounts.get(current);
+        if (balance >= amt /2){
+            System.out.println("Your loan is approved");
+        }else{
+            System.out.println("Your loan was denied");
+
+        }
     }
     private void processCommand(int cmd) {
         if (cmd == 0) quit();
