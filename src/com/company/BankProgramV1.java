@@ -29,7 +29,12 @@ public class BankProgramV1 {
         accounts.put(current, 0);
         System.out.println("Your new account number is " + current);
     }
-
+    private void select(){
+        System.out.println("Enter account#: ");
+        current = scanner.nextInt();
+        int balance =  accounts.get(current);
+        System.out.println("The balance of account" + current + " is "+ balance);
+    }
     private void processCommand(int cmd) {
         if (cmd == 0) quit();
         else if (cmd == 1) newAccount();
