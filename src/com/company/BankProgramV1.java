@@ -22,9 +22,17 @@ public class BankProgramV1 {
     }
 
     private void processCommand(int cmd) {
-        if (cmd== 0) quit();
-        else if (cmd ==1) newAccount();
-        else if (cmd== 2)
+        if (cmd == 0) quit();
+        else if (cmd == 1) newAccount();
+        else if (cmd == 2) select();
+        else if (cmd == 3) deposit();
+        else if (cmd == 4) authorizeloan();
+        else if (cmd == 5) showAll();
+        else if (cmd == 6) addInterest();
+        else {
+            system.out.println("illegal command");
+        }
+
     }
 
 }
