@@ -8,7 +8,8 @@ public interface BankProgramV5 {
         public  abstract  boolean isForeign();
         public  abstract  void  setForeign(boolean isForeign);
         public abstract  void deposit(int amt);
-        public void boolean hasEnoughColleteral(int amt);
+        public abstract  boolean hasEnoughColleteral(int amt);
+        public  abstract  String toString();
 
 
 
