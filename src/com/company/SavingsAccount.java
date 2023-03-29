@@ -24,7 +24,9 @@ public class SavingsAccount implements BankProgramV5 {
     public void setForeign(boolean isForeign) {
 
     }
-
+    public void addInterest() {
+        balance += (int) (balance * rate);
+    }
 
     public void deposit(int amt) {
 
