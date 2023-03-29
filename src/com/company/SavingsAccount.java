@@ -1,7 +1,10 @@
 package com.company;
 
 public class SavingsAccount implements BankProgramV5 {
-
+    private double rate = 0.01;
+    private int acctnum;
+    private int balance = 0;
+    private boolean isforeign = false;
 
     public int getAccNumber() {
         return 0;
@@ -29,6 +32,12 @@ public class SavingsAccount implements BankProgramV5 {
 
 
     public boolean hasEnoughColleteral(int amt) {
-        return false;
+        return balance >= loanamt / 2;
+    }
+
+    public String to_String() {
+        return "Savings account " + acctnum
+                + ": balance=" + balance
+                + ", is " + (isforeign ? "foreign" : "domestic")
     }
 }
